@@ -47,8 +47,8 @@ class Epd2in13bv3(Observer):
 
     def update(self, data):
         self.form_image(data)
-        image_black_rotated = self.image_black.rotate(180)
-        image_ry_rotated = self.image_ry.rotate(180)
+        image_black_rotated = self.image_black.rotate(0)
+        image_ry_rotated = self.image_ry.rotate(0)
         self.epd.display(
             self.epd.getbuffer(image_black_rotated),
             self.epd.getbuffer(image_ry_rotated)
